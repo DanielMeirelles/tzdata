@@ -1,2 +1,4 @@
 ---
 # tasks file for roles/tzdata
+- name: verificar hora java
+  include_tasks: "horajava.yml"
