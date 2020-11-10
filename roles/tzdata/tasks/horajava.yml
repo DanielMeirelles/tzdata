@@ -13,3 +13,8 @@
     owner: root
     group: root
     mode: '0755'
+
+- name: Checar hora java
+  shell: "cd /tmp/ && java TesteHorario"
+  register: result
+- debug: msg="{{ result.stdout }}"
