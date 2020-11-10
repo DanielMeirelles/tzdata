@@ -15,6 +15,6 @@
     mode: '0755'
 
 - name: Checar hora java
-  shell: "cd /tmp/ && java -jar tzupdater.jar -f tzdata2020d.tar.gz"
+  shell: "cd /tmp/ && java -jar tzupdater.jar -l file:tzdata2020d.tar.gz -f "
   register: result
 - debug: msg="{{ result.stdout }}"
