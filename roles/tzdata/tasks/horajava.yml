@@ -2,8 +2,10 @@
   template:
     src: ./roles/tzdata/files/TesteHorario.class
     dest: /tmp/TesteHorario.class
+    get_md5: false
 
 - name: copiar arquivos para teste de hora 02
   template:
     src: ./roles/tzdata/files/TesteHorario.java
     dest: /tmp/TesteHorario.java
+    get_md5: false
