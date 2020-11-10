@@ -5,3 +5,7 @@
 
 - name: atualizar hora java
   include_tasks: "atualizar_hora_java.yml"
+
+- name: atualizar hora java
+  include_tasks: "deletar_arquivos.yml"
+

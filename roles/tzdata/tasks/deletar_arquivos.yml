@@ -1,0 +1,19 @@
+- name: Deletar TesteHorario.class
+  file:
+    path: /tmp/TesteHorario.class
+    state: absent
+
+- name: Deletar TesteHorario.java
+  file:
+    path: /tmp/TesteHorario.java
+    state: absent
+
+- name: Deletar tzdata2020d.tar.gz
+  file:
+    path: /tmp/tzdata2020d.tar.gz
+    state: absent
+
+- name: Deletar tzupdater.jar
+  file:
+    path: /tmp/tzupdater.jar
+    state: absent

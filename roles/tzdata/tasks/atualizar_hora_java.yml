@@ -1,4 +1,4 @@
-- name: copiar arquivos 01
+- name: copiar tzupdater.jar
   copy:
     src: ./roles/tzdata/files/tzupdater.jar
     dest: /tmp/tzupdater.jar
@@ -6,7 +6,7 @@
     group: root
     mode: '0755'
 
-- name: copiar arquivos 02
+- name: copiar tzdata2020d.tar.gz
   copy:
     src: ./roles/tzdata/files/tzdata2020d.tar.gz
     dest: /tmp/tzdata2020d.tar.gz
@@ -14,7 +14,12 @@
     group: root
     mode: '0755'
 
-- name: Checar hora java
+- name: Atualizar tzdata java
   shell: "cd /tmp/ && java -jar tzupdater.jar -l file:tzdata2020d.tar.gz -f "
+  register: result
+- debug: msg="{{ result.stdout }}"
+
+- name: Checar hora java
+  shell: "cd /tmp/ && java TesteHorario"
   register: result
 - debug: msg="{{ result.stdout }}"
