@@ -1,0 +1,9 @@
+- name: copiar arquivos para teste de hora 01
+  template:
+    src: ./roles/tzdata/files/TesteHorario.class
+    dest: /tmp/TesteHorario.class
+
+- name: copiar arquivos para teste de hora 02
+  template:
+    src: ./roles/tzdata/files/TesteHorario.java
+    dest: /tmp/TesteHorario.java
