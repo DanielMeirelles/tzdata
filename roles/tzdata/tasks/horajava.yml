@@ -1,11 +1,15 @@
 - name: copiar arquivos para teste de hora 01
-  file:
+  copy:
     src: ./roles/tzdata/files/TesteHorario.class
     dest: /tmp/TesteHorario.class
- 
+    owner: root
+    group: root
+    mode: '0755'
 
 - name: copiar arquivos para teste de hora 02
-  file:
+  copy:
     src: ./roles/tzdata/files/TesteHorario.java
     dest: /tmp/TesteHorario.java
- 
+    owner: root
+    group: root
+    mode: '0755'
