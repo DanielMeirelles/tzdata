@@ -18,3 +18,9 @@
   shell: "cd /tmp/ && java TesteHorario"
   register: result
 - debug: msg="{{ result.stdout }}"
+
+- name: stop/start - jboss
+  command: /etc/init.d/jboss stop && /etc/init.d/jboss start
+  warn: no
+  register: result
+- debug: msg="{{ result.stdout }}"
