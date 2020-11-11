@@ -20,14 +20,12 @@
 
 - name: start jboss
   shell: /etc/init.d/jboss stop
-  warn: no
   ignore_errors: yes
   register: result
 - debug: msg="{{ result.stdout }}"
 
 - name: start  jboss
   shell: /etc/init.d/jboss start
-  warn: no
   ignore_errors: yes
   register: result
 - debug: msg="{{ result.stdout }}"
