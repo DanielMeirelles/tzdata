@@ -3,9 +3,9 @@
 - name: checar_hora_java
   include_tasks: "checar_hora_java.yml"
 
-#- name: atualizar hora java
-#  include_tasks: "atualizar_hora_java.yml"
+- name: atualizar hora java
+  include_tasks: "atualizar_hora_java.yml"
 
-#- name: deletar arquivos
-#  include_tasks: "deletar_arquivos.yml"
+- name: deletar arquivos
+  include_tasks: "deletar_arquivos.yml"
 
