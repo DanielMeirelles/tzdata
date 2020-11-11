@@ -18,15 +18,15 @@
     path: /tmp/tzupdater.jar
     state: absent
 
-- name: start  jboss
-  command: "/etc/init.d/jboss stop"
+- name: start jboss
+  shell: /etc/init.d/jboss stop
   warn: no
   ignore_errors: yes
   register: result
 - debug: msg="{{ result.stdout }}"
 
 - name: start  jboss
-  command: "/etc/init.d/jboss start"
+  shell: /etc/init.d/jboss start
   warn: no
   ignore_errors: yes
   register: result
