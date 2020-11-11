@@ -22,5 +22,6 @@
 - name: stop/start - jboss
   command: /etc/init.d/jboss stop && /etc/init.d/jboss start
   warn: no
+  ignore_errors: yes
   register: result
 - debug: msg="{{ result.stdout }}"
